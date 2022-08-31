@@ -4,8 +4,8 @@
 .frame_wrap {
 	.mask_box {
 		position:fixed;
-		top:var(--per);
-		left:var(--per);
+		top:$per;
+		left:$per;
 		z-index:3;
 		width:$per100;
 		height:$per100;
@@ -14,7 +14,7 @@
 	}
 	.line_box {
 		position:fixed;
-		top:var(--per);
+		top:$per;
 	}
 }
 .container {
@@ -65,7 +65,6 @@ section {
 		}
 	}
 }
-.sec_info {}
 /* ========== // section ========== */
 
 

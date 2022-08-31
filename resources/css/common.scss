@@ -11,13 +11,11 @@ a {color:#000;text-decoration:none;}
 /* ========== // Reset ========== */
 
 /* ========== Variable ========== */
-:root {
-	$zero : 0;
-	$per100 : 100%;
-	$mar20 : 20px;
-	$bg : rgba(255, 255, 255, 0.4);
-	--per : max(20px, 4vmin);
-}
+$zero : 0;
+$per100 : 100%;
+$mar20 : 20px;
+$bg : rgba(255, 255, 255, 0.4); 
+$per : max(20px, 10%);
 /* ========== // Variable ========== */
 
 /* ========== Layout ========== */
@@ -31,7 +29,7 @@ body{
 	top:0;
 	left:0;
 	width:100vw;
-	height:100px;
+	height:$per;
 	z-index:10;
 	background-color:$bg;
 }
@@ -40,7 +38,7 @@ body{
 	bottom:0;
 	left:0;
 	width:100vw;
-	height:100px;
+	height:$per;
 	z-index:10;
 	background-color:$bg;	
 }

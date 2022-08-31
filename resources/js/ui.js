@@ -5,7 +5,7 @@ const ui = {
             allElements = document.getElementsByTagName('*');
 
         /* 초기 실행 */
-        _this.early(tagHtml);
+       //  _this.early(tagHtml);
 
         /* 공통페이지 Include */
         Array.prototype.forEach.call(allElements, function(el) {
