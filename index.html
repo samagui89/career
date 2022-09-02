@@ -10,13 +10,36 @@
 	</head>
 	<body>
 		<div class="wrapper">
-			<header data-import-url="/include/header.html"></header>
+			<header class="header">
+				<h1 class="logo"><button type="button">Jung Kyung Jin</button></h1>
+				<p class="desc">UI Developer &amp; Publisher</p>
+				<nav>
+					<ul>
+						<li class="selected">
+							<span class="dot">&middot;</span>
+							<button type="button" onclick="ui.navClick.init(this, 'home');">Home</button>
+						</li>
+						<li>
+							<span class="dot">&middot;</span>
+							<button type="button" onclick="ui.navClick.init(this, 'info');">Info</button>
+						</li>
+						<li>
+							<span class="dot">&middot;</span>
+							<button type="button" onclick="ui.navClick.init(this, 'projects');">Projects</button>
+						</li>
+						<li>
+							<span class="dot">&middot;</span>
+							<button type="button" onclick="ui.navClick.init(this, 'contact');">Contact</button>
+						</li>
+					</ul>
+				</nav>
+			</header>
 			<div class="bg_wrap"></div>
+			<div class="mask_box">
+				<div class="mask_top"></div>
+				<div class="mask_bottom"></div>
+			</div>
 			<div class="frame_wrap">
-				<div class="mask_box">
-					<div class="mask_top"></div>
-					<div class="mask_bottom"></div>
-				</div>
 				<div class="line_box">
 					<div class="frame_line line_top"></div>
 					<div class="frame_line line_right"></div>
@@ -26,8 +49,47 @@
 			</div>
 			<main id="container" class="container">
 				<div class="content" style="transform: translate3d(0px, 0px, 0px);">
-					<section class="sec_wrap active_section">
-						<div class="sec_cont">
+					<section class="sec_wrap selected_section" data-section="home" style="opacity:1;">
+						<div class="sec_cont home">
+							<div class="sec_item">
+								<span>웹에서 불가능은 없다.</span>
+								<span>저는 제 실력을 당당히 펼치고</span>
+								<span>인정받을 수 있는 일이 좋습니다.</span>
+								<span>지금 하는 일이 그 일이라고 느꼈고,</span>
+								<span>제 선택에는 후회가 없습니다.</span>
+								<span>제 작은 능력이라도 최상으로</span>
+								<span>발휘할 수 있도록 기회를 주는 곳이라면,</span>
+								<span>높은곳을 향해 배우고</span>
+								<span>도전을 두려워 하지 않고</span>
+								<span>모든 팀원과 화합하며</span>
+								<span>프로젝트를 성공적으로 완수하는</span>
+								<span>UI Developer 정경진입니다.</span>
+							</div>
+						</div>
+					</section>
+					<section class="sec_wrap" data-section="info">
+						<div class="sec_cont info">
+							<div class="sec_item">
+								<div class="info_item">
+									<ul>
+										<li><a href="">Instagram ↗</a></li>
+										<li><a href="https://www.notion.so/93c98923c51b4fab946f9792f74c1afa" target="_blank">fdsa ↗</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</section>
+					<section class="sec_wrap" data-section="projects">
+						<div class="sec_cont projects">
+							<div class="sec_item">
+								ㄴㅁㄹㅇㄴㅁ<br>
+								ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>
+								ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>
+							</div>
+						</div>
+					</section>
+					<section class="sec_wrap" data-section="contact">
+						<div class="sec_cont contact">
 							<div class="sec_item">
 								ㄴㅁㄹㅇㄴㅁ<br>
 								ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>ㄴㅁㄹㅇㄴㅁ<br>
@@ -39,7 +101,6 @@
 			</main>
 			<!-- <footer data-import-url="/include/footer.html"></footer> -->
 		</div>
-		<header data-import-url="/include/footer.html"></header>
 		<script src="./resources/js/ui.js"></script>
 	</body>
 

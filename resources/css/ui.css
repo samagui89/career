@@ -1,11 +1,26 @@
 /* ========== Reset ========== */
+@font-face {
+    font-family: 'NotoSansKR';
+    font-weight: 300;
+    src: url('../font/NotoSansKR-Light.otf') format('opentype');
+}
+@font-face {
+    font-family: 'NotoSansKR';
+    font-weight: 400;
+    src: url('../font/NotoSansKR-Regular.otf') format('opentype');
+}
+@font-face {
+    font-family: 'NotoSansKR';
+    font-weight: 700;
+    src: url('../font/NotoSansKR-Bold.otf') format('opentype');
+}
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	line-height: 1;
+	line-height: 1.2;
 	font-size: 15px;
-	font-family: 'Noto', sans-serif;
+	font-family: 'NotoSansKR', sans-serif;
 	vertical-align: baseline;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
@@ -35,6 +50,7 @@ button {
 	padding: 0;
 	border: none;
 	background: transparent;
+	font-family:'NotoSansKR', sans-serif;
 	cursor: pointer;
 }
 a {
@@ -57,18 +73,90 @@ body {
 	overflow: hidden;
 	scroll-behavior: smooth;
 }
-
 .header {
 	position:fixed;
 	top:calc(var(--pad) * 2);
 	left:calc(var(--pad) * 2);
 	z-index:20;
 }
-
-.frame_wrap {
-	
+.header h1 button {
+	font-size:2em;
+	font-weight:300;
+	letter-spacing:-1px;;
 }
-.frame_wrap .mask_box {
+.header .desc {
+	margin-top:2vmin;
+	color:#666666;
+	font-weight:300;
+}
+.header nav {
+	margin-top:4vmin;
+}
+.header nav ul {
+	display:flex;
+	flex-direction:column;
+	row-gap:2vmin;
+}
+.header nav .dot {
+	display:none;
+}
+.header nav .selected .dot {
+	display:block;
+}
+.header nav button {
+	position:relative;
+	font-size:1.2em;
+	font-weight:700;
+	opacity:1;
+	transition:opacity .2s linear;
+}
+.header nav button:hover,
+.header nav button:focus {
+	opacity:.5;
+}
+.header nav button:before {
+	content:'';
+	position:absolute;
+	top:-5px;
+	left:-5px;
+	width:calc(100% + 10px);
+	height:calc(100% + 10px);
+}
+.header nav .selected button {
+	display:none;
+}
+.bg_wrap {
+	position:fixed;
+	z-index:1;
+	top: var(--pad);
+	left: var(--pad);
+	bottom: var(--pad);
+	right: var(--pad);
+	overflow:hidden;
+	pointer-events:none;
+    background: linear-gradient(235deg, #fffcdc, #eeeeee, #e3f2ff, #ffe3e3, #e3ffe3);
+    background-size: 600% 600%;
+    -webkit-animation: bggradient 20s ease infinite;
+    animation: bggradient 20s ease infinite;
+	opacity:.3;
+}
+.bg_wrap:before {
+	content:'';
+	position:fixed;
+	z-index:2;
+	top: var(--pad);
+	left: var(--pad);
+	bottom: var(--pad);
+	right: var(--pad);
+	overflow:hidden;
+	pointer-events:none;
+	background-image: repeating-radial-gradient(circle at 17% 32%, #ffffff, #111111 0.00085px);
+	background-position: center;
+	animation: noise 5s linear infinite;
+	mix-blend-mode: color-burn;
+	opacity:.7;
+}
+.mask_box {
 	position:fixed;
 	top:0;
 	left:0;
@@ -78,7 +166,7 @@ body {
 	overflow:hidden;
 	pointer-events:none;
 }
-.frame_wrap .mask_box .mask_top {
+.mask_box .mask_top {
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -88,7 +176,7 @@ body {
 	background-color: var(--basic-bg);
 	opacity:.9;
 }
-.frame_wrap .mask_box .mask_bottom {
+.mask_box .mask_bottom {
 	position: fixed;
 	bottom: 0;
 	left: 0;
@@ -97,45 +185,51 @@ body {
 	z-index: 10;
 	background-color: var(--basic-bg);
 	opacity:.9;
-
+}
+.frame_wrap {
+	position:fixed;
+	top:var(--pad);
+	left:0;
+	bottom:var(--pad);
+	right:0;
+	background:var(--basic-bg);
+	mix-blend-mode: color-burn;
 }
 .frame_wrap .line_box {
 	position:fixed;
 	z-index:10;
-	top:var(--pad);
-	left:var(--pad);
-	bottom:var(--pad);
-	right:var(--pad);
+	top:calc(var(--pad) - 1px);
+	left:calc(var(--pad) - 1px);
 	mix-blend-mode: difference;
 }
 .frame_wrap .line_box .frame_line {
-	position:absolute;
+	position:fixed;
 	background-color:#fff;
 	opacity:.5;
 }
 .frame_wrap .line_box .frame_line.line_top {
-	top:0;
-	left:0;
-	width:100%;
+	top:var(--pad);
+	left:var(--pad);
+	width:calc(100% - var(--pad)*2);
 	height:1px;
 }
 .frame_wrap .line_box .frame_line.line_right {
-	top:0;
-	right:0;
+	top:var(--pad);
+	right:var(--pad);
 	width:1px;
-	height:100%;
+	height:calc(100% - var(--pad)*2);
 }
 .frame_wrap .line_box .frame_line.line_bottom {
-	bottom:0;
-	left:0;
-	width:100%;
+	bottom:var(--pad);
+	left:var(--pad);
+	width:calc(100% - var(--pad)*2);
 	height:1px;
 }
 .frame_wrap .line_box .frame_line.line_left {
-	top:0;
-	left:0;
+	top:var(--pad);
+	left:var(--pad);
 	width:1px;
-	height:100%;
+	height:calc(100% - var(--pad)*2);
 }
 
 .footer {
@@ -151,7 +245,6 @@ body {
 	overflow: hidden;
 	width: 100%;
 	height: 100%;
-	background-color: var(--basic-bg);
 }
 .content {
 	position: relative;
@@ -162,15 +255,75 @@ body {
 }
 /* ========== // Basic ========== */
 /* ========== section ========== */
-section .sec_cont {
+.sec_wrap {
+	display:none;
+	opacity:0;
+}
+.sec_wrap.selected_section {
+	display:block;
+}
+.sec_wrap .sec_cont {
+	overflow-y:auto;
+	max-height:100vh;
+	text-align:right;
+	scroll-behavior: smooth;
+}
+.sec_wrap .sec_cont::-webkit-scrollbar{
+	display:none;
+}
+.sec_wrap .sec_cont.home {
+	position:absolute;
+	right:calc(var(--pad)*2);
+	bottom:calc(var(--pad)*2);
+	overflow-y:hidden;
+}
+.sec_wrap .sec_cont.home .sec_item {
+	display:flex;
+	flex-direction:column;
+	row-gap:1.5vmin;
+}
+.sec_wrap .sec_cont.home .sec_item span {
+	text-align:left;
+	font-size:1.2em;
+	font-weight:700;
+}
+.sec_wrap .sec_cont.info {
+	position:absolute;
+	left:calc(var(--pad)*2);
+	bottom:calc(var(--pad)*2);
+	overflow-y:hidden;
+	text-align:left;
+}
+.sec_wrap .sec_cont.projects {
 	padding: calc(var(--pad)*2 + 96px) calc(var(--pad)*2);
 	text-align:right;
 }
-
-section .sec_cont .sec_item {
-	
+.sec_wrap .sec_cont.contact {
+	padding: calc(var(--pad)*2 + 96px) calc(var(--pad)*2);
+	text-align:right;
+}
+.sec_wrap .sec_cont .sec_item {
 }
 
 /* ========== // section ========== */
+
 /* ========== Keyframes ========== */
+@-webkit-keyframes bggradient {
+    0%{background-position:0% 94%}
+    50%{background-position:100% 7%}
+    100%{background-position:0% 94%}
+}
+@keyframes bggradient {
+    0%{background-position:0% 94%}
+    50%{background-position:100% 7%}
+    100%{background-position:0% 94%}
+}
+@-webkit-keyframes noise {
+    from {background-size: 100% 100%;}
+	to {background-size: 200% 200%;}
+}
+@keyframes noise {
+    from {background-size: 100% 100%;}
+	to {background-size: 200% 200%;}
+}
 /* ========== // Keyframes ========== */
