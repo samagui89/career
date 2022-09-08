@@ -109,7 +109,7 @@ function handleClick(myRadio) {
         document.documentElement.style.setProperty("--c333", "#dddddd"),
         document.documentElement.style.setProperty("--c666", "#bbbbbb"),
         document.documentElement.style.setProperty("--c999", "#aaaaaa"),
-        document.documentElement.style.setProperty("--cccc", "1px solid #444444")
+        document.documentElement.style.setProperty("--cccc", "#444444")
     )
     : (
         document.getElementsByClassName("wrapper")[0].classList.remove("is_dark"),
@@ -118,7 +118,7 @@ function handleClick(myRadio) {
         document.documentElement.style.setProperty("--c333", "#333333"),
         document.documentElement.style.setProperty("--c666", "#666666"),
         document.documentElement.style.setProperty("--c999", "#999999"),
-        document.documentElement.style.setProperty("--cccc", "1px solid #cccccc")
+        document.documentElement.style.setProperty("--cccc", "#cccccc")
     )
 }
 
