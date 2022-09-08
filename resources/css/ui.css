@@ -300,6 +300,46 @@ body {
 .color_mode_wrap :checked + label:before {
 	background-color:var(--c333);
 }
+.loading_box {
+	position:fixed;
+	top:0;
+	left:0;
+	z-index:100;
+	width:100vw;
+	height:100vh;
+	background-color:var(--c999);
+	-webkit-transition:background-color .5s 1s linear;
+	transition:background-color .5s 1s linear;
+}
+.loading_box p {
+	position:absolute;
+	top:50%;
+	left:50%;
+	color:var(--c333);
+	font-size:2em;
+	font-weight:300;
+	-webkit-transform:translate(-50%, -50%);
+	transform:translate(-50%, -50%);
+	-webkit-transition:opacity .5s .3s linear;
+	transition:opacity .5s .3s linear;
+	opacity:1;
+}
+.loading_box p strong {
+	font-size:1em;
+	font-weight:700;
+	-webkit-transition:opacity .5s linear;
+	transition:opacity .5s linear;
+	opacity:1;
+}
+.loading_box.close {
+	background-color:transparent;
+}
+.loading_box.close p {
+	opacity:0;
+}
+.loading_box.close p strong {
+	opacity:0;
+}
 /* ========== // Layout ========== */
 
 /* ========== Basic ========== */

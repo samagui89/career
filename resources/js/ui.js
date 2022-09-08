@@ -132,7 +132,7 @@ window.onload = function() {
         request = new ActiveXObject("microsoft.XMLHTTP");
     }
 
-    request.open("GET","/career/include/project.xml");
+    request.open("GET","../../include/project.xml");
     request.send();
 
     request.onreadystatechange = function() {
@@ -171,4 +171,13 @@ window.onload = function() {
             }
         }
     };
+
+    //loading close
+    
+    setTimeout(function(){
+        document.getElementsByClassName("loading_box")[0].classList.add('close');
+        setTimeout(function(){
+            document.getElementsByClassName("loading_box")[0].remove();
+        }, 1500);
+    }, 1000);
 };
