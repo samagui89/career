@@ -15,11 +15,11 @@ const ui = {
         //  _this.early(_tagHtml);
 
         // Touch 이벤트를 필요로하는 디바이스
-        // if ('maxTouchPoints' in navigator && navigator.maxTouchPoints > 0) {
-        //     let _mo = document.getElementsByClassName("wrapper");
+        if('maxTouchPoints' in navigator && navigator.maxTouchPoints > 0) {
+            let mo = document.getElementsByClassName("wrapper");
             
-        //     _mo[0].classList.add('mo');
-        // };
+            mo[0].classList.add('mo');
+        };
     },
     includeFuc : {
         /* 공통페이지 Include */
