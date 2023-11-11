@@ -15,11 +15,13 @@ const ui = {
         //  _this.early(_tagHtml);
 
         // Touch 이벤트를 필요로하는 디바이스
-        if('maxTouchPoints' in navigator && navigator.maxTouchPoints > 0) {
+        var userAgent = navigator.userAgent;
+
+        if (/Android/i.test(userAgent) || /iPhone|iPad|iPod/i.test(userAgent)) {
             let mo = document.getElementsByClassName("wrapper");
             
             mo[0].classList.add('mo');
-        };
+        }
     },
     includeFuc : {
         /* 공통페이지 Include */
