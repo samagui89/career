@@ -13,15 +13,6 @@ const ui = {
 
         // init evt
         //  _this.early(_tagHtml);
-
-        // Touch 이벤트를 필요로하는 디바이스
-        var userAgent = navigator.userAgent;
-
-        if (/Android/i.test(userAgent) || /iPhone|iPad|iPod/i.test(userAgent)) {
-            let mo = document.getElementsByClassName("wrapper");
-            
-            mo[0].classList.add('mo');
-        }
     },
     includeFuc : {
         /* 공통페이지 Include */
@@ -104,7 +95,15 @@ const ui = {
 
 document.addEventListener("DOMContentLoaded", function(){
     ui.init();
+    
+    // Touch 이벤트를 필요로하는 디바이스
+    var userAgent = navigator.userAgent;
 
+    if (/Android/i.test(userAgent) || /iPhone|iPad|iPod/i.test(userAgent)) {
+        let mo = document.getElementsByClassName("wrapper");
+        
+        mo[0].classList.add('mo');
+    }
 });
 
 let currentValue = 0;
